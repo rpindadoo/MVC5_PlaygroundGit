@@ -1,0 +1,106 @@
+﻿@using Sample.DataAccess.Entities
+@model IEnumerable<Sample.Web.ViewModels.Movie.ListMovieModel>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Movies and rates</div>    
+    
+    <span class="pull-right">
+        @Html.ActionLink("Add new movie", "Create", null, new{@class = "btn btn-sm btn-info", data_toggle = "modal", data_target = ".modal"})
+    </span>    
+
+    <div class="panel-body">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Date added</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @{ var i = 0; }
+
+                @foreach (var movie in Model.OrderByDescending(m => m.Date)){
+                    i++;
+
+                    <tr data-toggle="collapse" style="cursor: pointer;" href="#MoviesRow@(i)">
+                        <td>
+                            @movie.Title
+                        </td>
+                        <td>
+                            @movie.Date.ToString("dd-MM-yyyy")
+                        </td>    
+                        <td>
+                            <div class="dropdown">
+                                <a id="dropdownLabel" role="button" data-toggle="dropdown" data-target="#">
+                                    <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownLabel">
+                                    <li>
+                                        @Html.ActionLink("Rate", "Create", "MovieRates", new{id = movie.Id}, new{data_toggle = "modal", data_target = ".modal"})
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Edit", "Edit", new{id = movie.Id}, new{data_toggle = "modal", data_target = ".modal"})
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Delete", "Delete", new{id = movie.Id}, new{data_toggle = "modal", data_target = ".modal"})
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>                
+                    </tr>
+
+                    <tr id="MoviesRow@(i)" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Rate</th>
+                                        <th>Comments</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (var movieRate in movie.MovieRates){
+                                    <tr>
+                                        <td>
+                                            @movieRate.User.FullName
+                                        </td>
+                                        <td>
+                                            @movieRate.Date.ToString("dd-MM-yyyy")
+                                        </td>
+                                        <td>
+                                            @movieRate.Rate
+                                        </td>
+                                        <td>
+                                            @movieRate.Comments                  
+                                        </td> 
+                                        <td>
+                                            <div class="dropdown">
+                                                <a id="dropdownLabel2" role="button" data-toggle="dropdown" data-target="#">
+                                                    <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
+                                                </a>
+
+                                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownLabel2">
+                                                    <li>
+                                                        @Html.ActionLink("Delete", "Delete", "MovieRates", new{id = movieRate.Id}, new{data_toggle = "modal", data_target = ".modal"})
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

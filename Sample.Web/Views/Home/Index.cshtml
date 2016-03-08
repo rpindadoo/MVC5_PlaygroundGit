@@ -1,0 +1,60 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">    
+    
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Submit status</div>
+            <div class="panel-body text-center dashboard-widget-body">
+                <p>Last movie added:</p>
+                <h1 style="font-size: 85px; color: #d9534f;">6</h1>
+                <i>days ago</i>
+            </div>
+            <div class="panel-footer">
+                &nbsp;           
+                @Html.ActionLink("Go to list", "Index", "Movies", null, new {@class = "btn btn-xs btn-danger pull-right"})               
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Movies breakdown
+                <div class="pull-right">
+                    <small>@CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month) </small>
+                    <button type="button" class="btn btn-xs btn-default">
+                        <span class=" glyphicon glyphicon-calendar">
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="panel-body text-center dashboard-widget-body">
+                <div id="projectBreakdownChart"></div>     
+                <img src="@Url.Action("PieChart", "Home")" alt="UserActivity"/>           
+            </div>
+            <div class="panel-footer">
+                &nbsp;
+                <a href="#" class="btn btn-xs btn-info pull-right">Details</a>  
+            </div>
+        </div>
+    </div>    
+    
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Top rated</div>
+            <div class="panel-body text-center dashboard-widget-body">
+                @Html.Action("TopRatedList","Home")               
+            </div>
+            <div class="panel-footer">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("MovieRateList", "Home")
+

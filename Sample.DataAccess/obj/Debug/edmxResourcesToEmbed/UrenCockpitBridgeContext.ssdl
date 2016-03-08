@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UrenCockpitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="conv_defaultRole">
+    <Key>
+      <PropertyRef Name="pernumber" />
+    </Key>
+    <Property Name="pernumber" Type="bigint" Nullable="false" />
+    <Property Name="Role" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'urencockpit_20140227.dbo.conv_nieuwWerksoort' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="conv_nieuwWerksoort">
+          <Property Name="naam" Type="varchar" MaxLength="1000" />
+          <Property Name="Groep" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'urencockpit_20140227.dbo.conv_projectlist' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="conv_projectlist">
+          <Property Name="project" Type="varchar" MaxLength="50" />
+          <Property Name="groep" Type="bigint" />
+          <Property Name="werksoortgroep" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'urencockpit_20140227.dbo.conv_projectToDelete' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="conv_projectToDelete">
+          <Property Name="project" Type="bigint" />
+        </EntityType>-->
+  <EntityType Name="CostPrice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="PeriodStart" Type="datetime" Nullable="false" />
+    <Property Name="PeriodEnd" Type="datetime" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Daysheet">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PerNumber" Type="bigint" Nullable="false" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Starttijd" Type="datetime" Nullable="false" />
+    <Property Name="Eindtijd" Type="datetime" Nullable="false" />
+    <Property Name="NormaleMinuten" Type="smallint" Nullable="false" />
+    <Property Name="GewerkteMinuten" Type="smallint" Nullable="false" />
+    <Property Name="VakantieMinuten" Type="smallint" Nullable="false" />
+    <Property Name="ZiekteMinuten" Type="smallint" Nullable="false" />
+    <Property Name="OverMinuten" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enum_FilterActive">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" Nullable="false" />
+    <Property Name="Omschrijving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Enum_integrityType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" Nullable="false" />
+    <Property Name="Omschrijving" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enum_ListProjectOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectFase">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Omschrijving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectRole">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Enum_UserOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" Nullable="false" />
+    <Property Name="Omschrijving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Enum_UserType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" Nullable="false" />
+    <Property Name="Beschrijving" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enum_VakantieMethodiek">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Omschrijving" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Hoursheet">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PerNumber" Type="bigint" Nullable="false" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Starttijd" Type="datetime" Nullable="false" />
+    <Property Name="Eindtijd" Type="datetime" Nullable="false" />
+    <Property Name="Minuten" Type="smallint" Nullable="false" />
+    <Property Name="SubProject" Type="bigint" Nullable="false" />
+    <Property Name="Omschrijving" Type="ntext" />
+    <Property Name="Geaccodeerd" Type="bit" Nullable="false" />
+    <Property Name="Verwerkt" Type="bit" Nullable="false" />
+    <Property Name="Issuenr" Type="nvarchar" MaxLength="50" />
+    <Property Name="SyncedToTwinfieldAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="integrityCheck">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datum" Type="datetime" />
+    <Property Name="employee" Type="bigint" />
+    <Property Name="integrityType" Type="bigint" Nullable="false" />
+    <Property Name="Hoursheet" Type="bigint" />
+    <Property Name="veld1" Type="bigint" />
+    <Property Name="veld2" Type="varchar" MaxLength="512" />
+    <Property Name="veld3" Type="varchar" MaxLength="512" />
+    <Property Name="melding" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Naam" Type="nvarchar" MaxLength="40" />
+    <Property Name="StartDatum" Type="datetime" />
+    <Property Name="EindDatum" Type="datetime" />
+    <Property Name="Afgesloten" Type="bit" />
+    <Property Name="Manager" Type="bigint" />
+    <Property Name="ProjectGroup" Type="bigint" />
+    <Property Name="parentProject" Type="bigint" />
+    <Property Name="ProjectType" Type="bigint" />
+    <Property Name="ProjectFase" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ProjectEmployeeRole">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project" Type="bigint" Nullable="false" />
+    <Property Name="Employ" Type="bigint" Nullable="false" />
+    <Property Name="Role" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectGroup">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" MaxLength="40" />
+    <Property Name="Parent" Type="bigint" />
+    <Property Name="PoortGroep" Type="bigint" />
+    <Property Name="HoofdGroep" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ProjectWerksoortGroep">
+    <Key>
+      <PropertyRef Name="Project" />
+      <PropertyRef Name="WerksoortGroep" />
+    </Key>
+    <Property Name="Project" Type="bigint" Nullable="false" />
+    <Property Name="WerksoortGroep" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="bigint" Nullable="false" />
+    <Property Name="App_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="DefaultI" Type="bigint" />
+    <Property Name="DefaultB" Type="bit" />
+    <Property Name="DefaultD" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Subproject">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectNumber" Type="bigint" />
+    <Property Name="SubNaam" Type="nvarchar" MaxLength="40" />
+    <Property Name="SubStartdatum" Type="datetime" />
+    <Property Name="SubEinddatum" Type="datetime" />
+    <Property Name="SubAfgesloten" Type="bit" />
+    <Property Name="SubBudget" Type="float" />
+    <Property Name="Omschrijving" Type="ntext" />
+    <Property Name="VerwerkteMinuten" Type="int" />
+    <Property Name="Werksoort" Type="bigint" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TextBlock">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" />
+    <Property Name="Text" Type="ntext" />
+  </EntityType>
+  <EntityType Name="UrenBevestiging">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="bigint" Nullable="false" />
+    <Property Name="BevestigdDoor" Type="bigint" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Datum" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UrenCorrectie">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee" Type="bigint" Nullable="false" />
+    <Property Name="AantalMinuten" Type="int" />
+    <Property Name="Timestamp" Type="datetime" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Omschrijving" Type="varchar" MaxLength="4096" />
+    <Property Name="IngevoerdDoor" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UrenIndiening">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="bigint" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Datum" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UrenMail">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="bigint" Nullable="false" />
+    <Property Name="IsIndiening" Type="bit" Nullable="false" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Tekst" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NTUsername" Type="varchar" MaxLength="64" />
+    <Property Name="UserType" Type="bigint" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="VakantieMethodiek" Type="bigint" Nullable="false" />
+    <Property Name="VakantieSaldo" Type="bigint" />
+    <Property Name="Email" Type="varchar" MaxLength="128" />
+    <Property Name="DefaultGroup" Type="bigint" />
+    <Property Name="Hoofdgroep" Type="bigint" />
+    <Property Name="EindsaldoVorigJaar" Type="bigint" />
+    <Property Name="VerschilMinuten" Type="bigint" />
+    <Property Name="VerschilPerc" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="OverwerkMinuten" Type="bigint" />
+    <Property Name="Achternaam" Type="nvarchar" MaxLength="30" />
+    <Property Name="Voornamen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Roepnaam" Type="nvarchar" MaxLength="30" />
+    <Property Name="Initialen" Type="nvarchar" MaxLength="10" />
+    <Property Name="Tussenvoegsels" Type="nvarchar" MaxLength="10" />
+    <Property Name="Geboortedatum" Type="datetime" />
+    <Property Name="InDienstSinds" Type="datetime" />
+    <Property Name="Funktie" Type="nvarchar" MaxLength="30" />
+    <Property Name="Manager" Type="bigint" />
+    <Property Name="UitDienst" Type="datetime" />
+    <Property Name="LastEnteredDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserSetting">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="bigint" Nullable="false" />
+    <Property Name="Setting" Type="bigint" Nullable="false" />
+    <Property Name="ValI" Type="bigint" />
+    <Property Name="ValB" Type="bit" />
+    <Property Name="ValD" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VakantieSaldo">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PerNumber" Type="bigint" Nullable="false" />
+    <Property Name="Jaar" Type="int" Nullable="false" />
+    <Property Name="Saldo" Type="int" Nullable="false" />
+    <Property Name="IsBegin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Werkblok">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Werkrooster" Type="bigint" Nullable="false" />
+    <Property Name="Weekdag" Type="int" />
+    <Property Name="Starttijd" Type="datetime" />
+    <Property Name="Eindtijd" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="Werkrooster">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee" Type="bigint" />
+    <Property Name="Startdatum" Type="datetime" />
+    <Property Name="Einddatum" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WerkSoort">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="bigint" Nullable="false" />
+    <Property Name="WerkSoortGroep" Type="bigint" Nullable="false" />
+    <Property Name="Naam" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WerksoortGroep">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="bigint" Nullable="false" />
+    <Property Name="Groepscode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Groepsnaam" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CostPrice_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="CostPrice" Type="Self.CostPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="CostPrice">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Daysheet_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Daysheet" Type="Self.Daysheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Daysheet">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enum_ProjectRole_Enum_ProjectRole">
+    <End Role="Enum_ProjectRole" Type="Self.Enum_ProjectRole" Multiplicity="1" />
+    <End Role="Enum_ProjectRole1" Type="Self.Enum_ProjectRole" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectRole">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Enum_ProjectRole1">
+        <PropertyRef Name="OID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoursheet_Subproject">
+    <End Role="Subproject" Type="Self.Subproject" Multiplicity="1" />
+    <End Role="Hoursheet" Type="Self.Hoursheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subproject">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Hoursheet">
+        <PropertyRef Name="SubProject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoursheet_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Hoursheet" Type="Self.Hoursheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Hoursheet">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_Enum_integrityType1">
+    <End Role="Enum_integrityType" Type="Self.Enum_integrityType" Multiplicity="1" />
+    <End Role="integrityCheck" Type="Self.integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_integrityType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="integrityType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_Hoursheet">
+    <End Role="Hoursheet" Type="Self.Hoursheet" Multiplicity="0..1" />
+    <End Role="integrityCheck" Type="Self.integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hoursheet">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="Hoursheet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="integrityCheck" Type="Self.integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pdx_subproj_WerkSoort">
+    <End Role="WerkSoort" Type="Self.WerkSoort" Multiplicity="0..1" />
+    <End Role="Subproject" Type="Self.Subproject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WerkSoort">
+        <PropertyRef Name="oid" />
+      </Principal>
+      <Dependent Role="Subproject">
+        <PropertyRef Name="Werksoort" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Enum_ProjectFase">
+    <End Role="Enum_ProjectFase" Type="Self.Enum_ProjectFase" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectFase">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectFase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Enum_UserType">
+    <End Role="Enum_ProjectType" Type="Self.Enum_ProjectType" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_ProjectGroup">
+    <End Role="ProjectGroup" Type="Self.ProjectGroup" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_Enum_ProjectRole">
+    <End Role="Enum_ProjectRole" Type="Self.Enum_ProjectRole" Multiplicity="1" />
+    <End Role="ProjectEmployeeRole" Type="Self.ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectRole">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectEmployeeRole" Type="Self.ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Project" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="ProjectEmployeeRole" Type="Self.ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Employ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectGroup_ProjectGroup1">
+    <End Role="ProjectGroup" Type="Self.ProjectGroup" Multiplicity="0..1" />
+    <End Role="ProjectGroup1" Type="Self.ProjectGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectGroup1">
+        <PropertyRef Name="Parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectGroup_ProjectGroup2">
+    <End Role="ProjectGroup" Type="Self.ProjectGroup" Multiplicity="0..1" />
+    <End Role="ProjectGroup1" Type="Self.ProjectGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectGroup1">
+        <PropertyRef Name="PoortGroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectWerksoortGroep_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectWerksoortGroep" Type="Self.ProjectWerksoortGroep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectWerksoortGroep">
+        <PropertyRef Name="Project" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectWerksoortGroep_WerksoortGroep">
+    <End Role="WerksoortGroep" Type="Self.WerksoortGroep" Multiplicity="1" />
+    <End Role="ProjectWerksoortGroep" Type="Self.ProjectWerksoortGroep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WerksoortGroep">
+        <PropertyRef Name="oid" />
+      </Principal>
+      <Dependent Role="ProjectWerksoortGroep">
+        <PropertyRef Name="WerksoortGroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subproject_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="Subproject" Type="Self.Subproject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Subproject">
+        <PropertyRef Name="ProjectNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenBevestiging_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenBevestiging" Type="Self.UrenBevestiging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenBevestiging">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenBevestiging_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenBevestiging" Type="Self.UrenBevestiging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenBevestiging">
+        <PropertyRef Name="BevestigdDoor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenCorrectie_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenCorrectie" Type="Self.UrenCorrectie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenCorrectie">
+        <PropertyRef Name="Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenCorrectie_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenCorrectie" Type="Self.UrenCorrectie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenCorrectie">
+        <PropertyRef Name="IngevoerdDoor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenIndiening_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenIndiening" Type="Self.UrenIndiening" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenIndiening">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenMail_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UrenMail" Type="Self.UrenMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenMail">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Enum_UserType">
+    <End Role="Enum_UserType" Type="Self.Enum_UserType" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_UserType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Enum_VakantieMethodiek">
+    <End Role="Enum_VakantieMethodiek" Type="Self.Enum_VakantieMethodiek" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_VakantieMethodiek">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="VakantieMethodiek" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_ProjectGroup">
+    <End Role="ProjectGroup" Type="Self.ProjectGroup" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Hoofdgroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="User1" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetting_Setting">
+    <End Role="Setting" Type="Self.Setting" Multiplicity="1" />
+    <End Role="UserSetting" Type="Self.UserSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setting">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UserSetting">
+        <PropertyRef Name="Setting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetting_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserSetting" Type="Self.UserSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UserSetting">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VakantieSaldo_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="VakantieSaldo" Type="Self.VakantieSaldo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="VakantieSaldo">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Werkblok_Werkrooster">
+    <End Role="Werkrooster" Type="Self.Werkrooster" Multiplicity="1" />
+    <End Role="Werkblok" Type="Self.Werkblok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Werkrooster">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Werkblok">
+        <PropertyRef Name="Werkrooster" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Werkrooster_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Werkrooster" Type="Self.Werkrooster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Werkrooster">
+        <PropertyRef Name="Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WerkSoort_WerksoortGroep">
+    <End Role="WerksoortGroep" Type="Self.WerksoortGroep" Multiplicity="1" />
+    <End Role="WerkSoort" Type="Self.WerkSoort" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WerksoortGroep">
+        <PropertyRef Name="oid" />
+      </Principal>
+      <Dependent Role="WerkSoort">
+        <PropertyRef Name="WerkSoortGroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UrenCockpitModelStoreContainer">
+    <EntitySet Name="conv_defaultRole" EntityType="Self.conv_defaultRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CostPrice" EntityType="Self.CostPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Daysheet" EntityType="Self.Daysheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_FilterActive" EntityType="Self.Enum_FilterActive" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_integrityType" EntityType="Self.Enum_integrityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_ListProjectOrdering" EntityType="Self.Enum_ListProjectOrdering" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_ProjectFase" EntityType="Self.Enum_ProjectFase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_ProjectOrdering" EntityType="Self.Enum_ProjectOrdering" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_ProjectRole" EntityType="Self.Enum_ProjectRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_ProjectType" EntityType="Self.Enum_ProjectType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_UserOrdering" EntityType="Self.Enum_UserOrdering" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_UserType" EntityType="Self.Enum_UserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enum_VakantieMethodiek" EntityType="Self.Enum_VakantieMethodiek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hoursheet" EntityType="Self.Hoursheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="integrityCheck" EntityType="Self.integrityCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectEmployeeRole" EntityType="Self.ProjectEmployeeRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectGroup" EntityType="Self.ProjectGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectWerksoortGroep" EntityType="Self.ProjectWerksoortGroep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setting" EntityType="Self.Setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subproject" EntityType="Self.Subproject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TextBlock" EntityType="Self.TextBlock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrenBevestiging" EntityType="Self.UrenBevestiging" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrenCorrectie" EntityType="Self.UrenCorrectie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrenIndiening" EntityType="Self.UrenIndiening" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrenMail" EntityType="Self.UrenMail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSetting" EntityType="Self.UserSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VakantieSaldo" EntityType="Self.VakantieSaldo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Werkblok" EntityType="Self.Werkblok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Werkrooster" EntityType="Self.Werkrooster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WerkSoort" EntityType="Self.WerkSoort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WerksoortGroep" EntityType="Self.WerksoortGroep" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CostPrice_User" Association="Self.FK_CostPrice_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="CostPrice" EntitySet="CostPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Daysheet_User" Association="Self.FK_Daysheet_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Daysheet" EntitySet="Daysheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enum_ProjectRole_Enum_ProjectRole" Association="Self.FK_Enum_ProjectRole_Enum_ProjectRole">
+      <End Role="Enum_ProjectRole" EntitySet="Enum_ProjectRole" />
+      <End Role="Enum_ProjectRole1" EntitySet="Enum_ProjectRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoursheet_Subproject" Association="Self.FK_Hoursheet_Subproject">
+      <End Role="Subproject" EntitySet="Subproject" />
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoursheet_User" Association="Self.FK_Hoursheet_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_Enum_integrityType1" Association="Self.FK_integrityCheck_Enum_integrityType1">
+      <End Role="Enum_integrityType" EntitySet="Enum_integrityType" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_Hoursheet" Association="Self.FK_integrityCheck_Hoursheet">
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_User" Association="Self.FK_integrityCheck_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pdx_subproj_WerkSoort" Association="Self.FK_pdx_subproj_WerkSoort">
+      <End Role="WerkSoort" EntitySet="WerkSoort" />
+      <End Role="Subproject" EntitySet="Subproject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Enum_ProjectFase" Association="Self.FK_Project_Enum_ProjectFase">
+      <End Role="Enum_ProjectFase" EntitySet="Enum_ProjectFase" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Enum_UserType" Association="Self.FK_Project_Enum_UserType">
+      <End Role="Enum_ProjectType" EntitySet="Enum_ProjectType" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_ProjectGroup" Association="Self.FK_Project_ProjectGroup">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_Enum_ProjectRole" Association="Self.FK_ProjectEmployeeRole_Enum_ProjectRole">
+      <End Role="Enum_ProjectRole" EntitySet="Enum_ProjectRole" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_Project" Association="Self.FK_ProjectEmployeeRole_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_User" Association="Self.FK_ProjectEmployeeRole_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectGroup_ProjectGroup1" Association="Self.FK_ProjectGroup_ProjectGroup1">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="ProjectGroup1" EntitySet="ProjectGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectGroup_ProjectGroup2" Association="Self.FK_ProjectGroup_ProjectGroup2">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="ProjectGroup1" EntitySet="ProjectGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectWerksoortGroep_Project" Association="Self.FK_ProjectWerksoortGroep_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectWerksoortGroep" EntitySet="ProjectWerksoortGroep" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectWerksoortGroep_WerksoortGroep" Association="Self.FK_ProjectWerksoortGroep_WerksoortGroep">
+      <End Role="WerksoortGroep" EntitySet="WerksoortGroep" />
+      <End Role="ProjectWerksoortGroep" EntitySet="ProjectWerksoortGroep" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subproject_Project" Association="Self.FK_Subproject_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Subproject" EntitySet="Subproject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenBevestiging_User" Association="Self.FK_UrenBevestiging_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenBevestiging" EntitySet="UrenBevestiging" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenBevestiging_User1" Association="Self.FK_UrenBevestiging_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenBevestiging" EntitySet="UrenBevestiging" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenCorrectie_User" Association="Self.FK_UrenCorrectie_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenCorrectie" EntitySet="UrenCorrectie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenCorrectie_User1" Association="Self.FK_UrenCorrectie_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenCorrectie" EntitySet="UrenCorrectie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenIndiening_User" Association="Self.FK_UrenIndiening_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenIndiening" EntitySet="UrenIndiening" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenMail_User" Association="Self.FK_UrenMail_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenMail" EntitySet="UrenMail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Enum_UserType" Association="Self.FK_User_Enum_UserType">
+      <End Role="Enum_UserType" EntitySet="Enum_UserType" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Enum_VakantieMethodiek" Association="Self.FK_User_Enum_VakantieMethodiek">
+      <End Role="Enum_VakantieMethodiek" EntitySet="Enum_VakantieMethodiek" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_ProjectGroup" Association="Self.FK_User_ProjectGroup">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User" Association="Self.FK_User_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetting_Setting" Association="Self.FK_UserSetting_Setting">
+      <End Role="Setting" EntitySet="Setting" />
+      <End Role="UserSetting" EntitySet="UserSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetting_User" Association="Self.FK_UserSetting_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserSetting" EntitySet="UserSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VakantieSaldo_User" Association="Self.FK_VakantieSaldo_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VakantieSaldo" EntitySet="VakantieSaldo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Werkblok_Werkrooster" Association="Self.FK_Werkblok_Werkrooster">
+      <End Role="Werkrooster" EntitySet="Werkrooster" />
+      <End Role="Werkblok" EntitySet="Werkblok" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Werkrooster_User" Association="Self.FK_Werkrooster_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Werkrooster" EntitySet="Werkrooster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WerkSoort_WerksoortGroep" Association="Self.FK_WerkSoort_WerksoortGroep">
+      <End Role="WerksoortGroep" EntitySet="WerksoortGroep" />
+      <End Role="WerkSoort" EntitySet="WerkSoort" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

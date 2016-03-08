@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UrenCockpitModelStoreContainer" CdmEntityContainer="UrenCockpitContext">
+    <EntitySetMapping Name="conv_defaultRole">
+      <EntityTypeMapping TypeName="UrenCockpitModel.conv_defaultRole">
+        <MappingFragment StoreEntitySet="conv_defaultRole">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="pernumber" ColumnName="pernumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostPrice">
+      <EntityTypeMapping TypeName="UrenCockpitModel.CostPrice">
+        <MappingFragment StoreEntitySet="CostPrice">
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="PeriodEnd" ColumnName="PeriodEnd" />
+          <ScalarProperty Name="PeriodStart" ColumnName="PeriodStart" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Daysheet">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Daysheet">
+        <MappingFragment StoreEntitySet="Daysheet">
+          <ScalarProperty Name="OverMinuten" ColumnName="OverMinuten" />
+          <ScalarProperty Name="ZiekteMinuten" ColumnName="ZiekteMinuten" />
+          <ScalarProperty Name="VakantieMinuten" ColumnName="VakantieMinuten" />
+          <ScalarProperty Name="GewerkteMinuten" ColumnName="GewerkteMinuten" />
+          <ScalarProperty Name="NormaleMinuten" ColumnName="NormaleMinuten" />
+          <ScalarProperty Name="Eindtijd" ColumnName="Eindtijd" />
+          <ScalarProperty Name="Starttijd" ColumnName="Starttijd" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="PerNumber" ColumnName="PerNumber" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="UrenCockpitModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_FilterActive">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_FilterActive">
+        <MappingFragment StoreEntitySet="Enum_FilterActive">
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_integrityType">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_integrityType">
+        <MappingFragment StoreEntitySet="Enum_integrityType">
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_ListProjectOrdering">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_ListProjectOrdering">
+        <MappingFragment StoreEntitySet="Enum_ListProjectOrdering">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_ProjectFase">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_ProjectFase">
+        <MappingFragment StoreEntitySet="Enum_ProjectFase">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_ProjectOrdering">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_ProjectOrdering">
+        <MappingFragment StoreEntitySet="Enum_ProjectOrdering">
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_ProjectRole">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_ProjectRole">
+        <MappingFragment StoreEntitySet="Enum_ProjectRole">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_ProjectType">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_ProjectType">
+        <MappingFragment StoreEntitySet="Enum_ProjectType">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_UserOrdering">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_UserOrdering">
+        <MappingFragment StoreEntitySet="Enum_UserOrdering">
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_UserType">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_UserType">
+        <MappingFragment StoreEntitySet="Enum_UserType">
+          <ScalarProperty Name="Beschrijving" ColumnName="Beschrijving" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enum_VakantieMethodiek">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Enum_VakantieMethodiek">
+        <MappingFragment StoreEntitySet="Enum_VakantieMethodiek">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holiday">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Holiday">
+        <MappingFragment StoreEntitySet="Holiday">
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hoursheet">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Hoursheet">
+        <MappingFragment StoreEntitySet="Hoursheet">
+          <ScalarProperty Name="SyncedToTwinfieldAt" ColumnName="SyncedToTwinfieldAt" />
+          <ScalarProperty Name="Issuenr" ColumnName="Issuenr" />
+          <ScalarProperty Name="Verwerkt" ColumnName="Verwerkt" />
+          <ScalarProperty Name="Geaccodeerd" ColumnName="Geaccodeerd" />
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="SubProject" ColumnName="SubProject" />
+          <ScalarProperty Name="Minuten" ColumnName="Minuten" />
+          <ScalarProperty Name="Eindtijd" ColumnName="Eindtijd" />
+          <ScalarProperty Name="Starttijd" ColumnName="Starttijd" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="PerNumber" ColumnName="PerNumber" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="integrityCheck">
+      <EntityTypeMapping TypeName="UrenCockpitModel.integrityCheck">
+        <MappingFragment StoreEntitySet="integrityCheck">
+          <ScalarProperty Name="melding" ColumnName="melding" />
+          <ScalarProperty Name="veld3" ColumnName="veld3" />
+          <ScalarProperty Name="veld2" ColumnName="veld2" />
+          <ScalarProperty Name="veld1" ColumnName="veld1" />
+          <ScalarProperty Name="Hoursheet" ColumnName="Hoursheet" />
+          <ScalarProperty Name="integrityType" ColumnName="integrityType" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="ProjectFase" ColumnName="ProjectFase" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="parentProject" ColumnName="parentProject" />
+          <ScalarProperty Name="ProjectGroup" ColumnName="ProjectGroup" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Afgesloten" ColumnName="Afgesloten" />
+          <ScalarProperty Name="EindDatum" ColumnName="EindDatum" />
+          <ScalarProperty Name="StartDatum" ColumnName="StartDatum" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectEmployeeRole">
+      <EntityTypeMapping TypeName="UrenCockpitModel.ProjectEmployeeRole">
+        <MappingFragment StoreEntitySet="ProjectEmployeeRole">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Employ" ColumnName="Employ" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectGroup">
+      <EntityTypeMapping TypeName="UrenCockpitModel.ProjectGroup">
+        <MappingFragment StoreEntitySet="ProjectGroup">
+          <ScalarProperty Name="HoofdGroep" ColumnName="HoofdGroep" />
+          <ScalarProperty Name="PoortGroep" ColumnName="PoortGroep" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setting">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="DefaultD" ColumnName="DefaultD" />
+          <ScalarProperty Name="DefaultB" ColumnName="DefaultB" />
+          <ScalarProperty Name="DefaultI" ColumnName="DefaultI" />
+          <ScalarProperty Name="App_id" ColumnName="App_id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subproject">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Subproject">
+        <MappingFragment StoreEntitySet="Subproject">
+          <ScalarProperty Name="Werksoort" ColumnName="Werksoort" />
+          <ScalarProperty Name="VerwerkteMinuten" ColumnName="VerwerkteMinuten" />
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="SubBudget" ColumnName="SubBudget" />
+          <ScalarProperty Name="SubAfgesloten" ColumnName="SubAfgesloten" />
+          <ScalarProperty Name="SubEinddatum" ColumnName="SubEinddatum" />
+          <ScalarProperty Name="SubStartdatum" ColumnName="SubStartdatum" />
+          <ScalarProperty Name="SubNaam" ColumnName="SubNaam" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="UrenCockpitModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TextBlock">
+      <EntityTypeMapping TypeName="UrenCockpitModel.TextBlock">
+        <MappingFragment StoreEntitySet="TextBlock">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrenBevestiging">
+      <EntityTypeMapping TypeName="UrenCockpitModel.UrenBevestiging">
+        <MappingFragment StoreEntitySet="UrenBevestiging">
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="BevestigdDoor" ColumnName="BevestigdDoor" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrenCorrectie">
+      <EntityTypeMapping TypeName="UrenCockpitModel.UrenCorrectie">
+        <MappingFragment StoreEntitySet="UrenCorrectie">
+          <ScalarProperty Name="IngevoerdDoor" ColumnName="IngevoerdDoor" />
+          <ScalarProperty Name="Omschrijving" ColumnName="Omschrijving" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="AantalMinuten" ColumnName="AantalMinuten" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrenIndiening">
+      <EntityTypeMapping TypeName="UrenCockpitModel.UrenIndiening">
+        <MappingFragment StoreEntitySet="UrenIndiening">
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrenMail">
+      <EntityTypeMapping TypeName="UrenCockpitModel.UrenMail">
+        <MappingFragment StoreEntitySet="UrenMail">
+          <ScalarProperty Name="Tekst" ColumnName="Tekst" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="IsIndiening" ColumnName="IsIndiening" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="UrenCockpitModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="LastEnteredDate" ColumnName="LastEnteredDate" />
+          <ScalarProperty Name="UitDienst" ColumnName="UitDienst" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Funktie" ColumnName="Funktie" />
+          <ScalarProperty Name="InDienstSinds" ColumnName="InDienstSinds" />
+          <ScalarProperty Name="Geboortedatum" ColumnName="Geboortedatum" />
+          <ScalarProperty Name="Tussenvoegsels" ColumnName="Tussenvoegsels" />
+          <ScalarProperty Name="Initialen" ColumnName="Initialen" />
+          <ScalarProperty Name="Roepnaam" ColumnName="Roepnaam" />
+          <ScalarProperty Name="Voornamen" ColumnName="Voornamen" />
+          <ScalarProperty Name="Achternaam" ColumnName="Achternaam" />
+          <ScalarProperty Name="OverwerkMinuten" ColumnName="OverwerkMinuten" />
+          <ScalarProperty Name="VerschilPerc" ColumnName="VerschilPerc" />
+          <ScalarProperty Name="VerschilMinuten" ColumnName="VerschilMinuten" />
+          <ScalarProperty Name="EindsaldoVorigJaar" ColumnName="EindsaldoVorigJaar" />
+          <ScalarProperty Name="Hoofdgroep" ColumnName="Hoofdgroep" />
+          <ScalarProperty Name="DefaultGroup" ColumnName="DefaultGroup" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VakantieSaldo" ColumnName="VakantieSaldo" />
+          <ScalarProperty Name="VakantieMethodiek" ColumnName="VakantieMethodiek" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="NTUsername" ColumnName="NTUsername" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSetting">
+      <EntityTypeMapping TypeName="UrenCockpitModel.UserSetting">
+        <MappingFragment StoreEntitySet="UserSetting">
+          <ScalarProperty Name="ValD" ColumnName="ValD" />
+          <ScalarProperty Name="ValB" ColumnName="ValB" />
+          <ScalarProperty Name="ValI" ColumnName="ValI" />
+          <ScalarProperty Name="Setting" ColumnName="Setting" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VakantieSaldo">
+      <EntityTypeMapping TypeName="UrenCockpitModel.VakantieSaldo">
+        <MappingFragment StoreEntitySet="VakantieSaldo">
+          <ScalarProperty Name="IsBegin" ColumnName="IsBegin" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="Jaar" ColumnName="Jaar" />
+          <ScalarProperty Name="PerNumber" ColumnName="PerNumber" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Werkblok">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Werkblok">
+        <MappingFragment StoreEntitySet="Werkblok">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Eindtijd" ColumnName="Eindtijd" />
+          <ScalarProperty Name="Starttijd" ColumnName="Starttijd" />
+          <ScalarProperty Name="Weekdag" ColumnName="Weekdag" />
+          <ScalarProperty Name="Werkrooster" ColumnName="Werkrooster" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Werkrooster">
+      <EntityTypeMapping TypeName="UrenCockpitModel.Werkrooster">
+        <MappingFragment StoreEntitySet="Werkrooster">
+          <ScalarProperty Name="Einddatum" ColumnName="Einddatum" />
+          <ScalarProperty Name="Startdatum" ColumnName="Startdatum" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WerkSoort">
+      <EntityTypeMapping TypeName="UrenCockpitModel.WerkSoort">
+        <MappingFragment StoreEntitySet="WerkSoort">
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="WerkSoortGroep" ColumnName="WerkSoortGroep" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WerksoortGroep">
+      <EntityTypeMapping TypeName="UrenCockpitModel.WerksoortGroep">
+        <MappingFragment StoreEntitySet="WerksoortGroep">
+          <ScalarProperty Name="Groepsnaam" ColumnName="Groepsnaam" />
+          <ScalarProperty Name="Groepscode" ColumnName="Groepscode" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProjectWerksoortGroep" TypeName="UrenCockpitModel.ProjectWerksoortGroep" StoreEntitySet="ProjectWerksoortGroep">
+      <EndProperty Name="WerksoortGroep">
+        <ScalarProperty Name="oid" ColumnName="WerksoortGroep" />
+      </EndProperty>
+      <EndProperty Name="Project">
+        <ScalarProperty Name="OID" ColumnName="Project" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

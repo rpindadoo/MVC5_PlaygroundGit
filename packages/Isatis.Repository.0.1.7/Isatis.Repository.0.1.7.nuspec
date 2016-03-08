@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Isatis.Repository</id>
+    <version>0.1.7</version>
+    <title />
+    <authors>Martijn van den Enk</authors>
+    <owners>Martijn van den Enk</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Implementation of the repository pattern.</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="EntityFramework" version="5.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

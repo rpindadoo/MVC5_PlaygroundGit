@@ -1,0 +1,15 @@
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\UCB.DAL.dll.config
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\UCB.DAL.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\UCB.DAL.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\EntityFramework.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\Isatis.Repository.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\Isatis.Repository.Specification.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\Isatis.Specification.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\UCB.Domain.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\UCB.Domain.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\EntityFramework.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\obj\Debug\UCB.DAL.csprojResolveAssemblyReference.cache
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\obj\Debug\UCB.DAL.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\UCBridge\UrenCockpitBridge\UCB.DAL\obj\Debug\UCB.DAL.pdb

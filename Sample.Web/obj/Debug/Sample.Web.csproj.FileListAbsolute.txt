@@ -1,0 +1,91 @@
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Web.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Web.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Autofac.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Autofac.Integration.Mvc.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.DataAccess.Dependencies.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Service.Dependencies.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Mvc.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Optimization.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\WebActivatorEx.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.DataAccess.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\EntityFramework.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Service.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.DataAccess.Dependencies.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Service.Dependencies.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Autofac.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Autofac.Integration.Mvc.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Mvc.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Optimization.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.DataAccess.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\EntityFramework.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\Sample.Service.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.csprojResolveAssemblyReference.cache
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Razor.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\System.Web.Razor.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\BootstrapMvc.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sample\Sample.Web\bin\WebGrease.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\AutoMapper.Net4.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Web.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Web.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Autofac.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Autofac.Integration.Mvc.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\AutoMapper.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\EntityFramework.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Newtonsoft.Json.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\OoMapper.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Owin.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.DataAccess.Dependencies.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.DataAccess.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Service.Dependencies.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Service.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Helpers.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Mvc.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Optimization.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Razor.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\WebActivatorEx.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\WebGrease.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.DataAccess.Dependencies.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.DataAccess.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Service.Dependencies.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Sample.Service.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Autofac.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Autofac.Integration.Mvc.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\AutoMapper.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\EntityFramework.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\Newtonsoft.Json.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\OoMapper.pdb
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Helpers.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Mvc.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Optimization.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.Razor.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.csprojResolveAssemblyReference.cache
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.dll
+C:\Users\rpindado\Documents\Old\Projects\Sample\Sample.Web\obj\Debug\Sample.Web.pdb

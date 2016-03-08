@@ -1,0 +1,18 @@
+﻿@model Sample.Web.ViewModels.Movie.CreateMovieModel
+
+@using (Ajax.BeginForm("Create", "Movies", null, new DefaultAjaxModalOptions(), new{role = "form"})){ 
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Create a movie</h4>
+    </div>
+    <div class="modal-body">
+        @Html.Partial("_ModalAlert")
+        <div class="form-group">
+            @Html.LabelFor(p => p.Title)
+            @Html.TextBoxFor(p => p.Title, new { @class = "form-control" })
+        </div>
+    </div>
+    @Html.Partial("_ModalButtons")
+}
+
+@Scripts.Render("~/bundles/modal")

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Sandbox" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="SandboxContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProjectSet" EntityType="Sandbox.Project" />
+    <EntitySet Name="UserSet" EntityType="Sandbox.User" />
+    <AssociationSet Name="UserProject" Association="Sandbox.UserProject">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Project" EntitySet="ProjectSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="StartDate" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Sandbox.UserProject" FromRole="Project" ToRole="User" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Project" Relationship="Sandbox.UserProject" FromRole="User" ToRole="Project" />
+    <Property Type="String" Name="Firstname" Nullable="false" />
+    <Property Type="String" Name="Lastname" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" />
+  </EntityType>
+  <Association Name="UserProject">
+    <End Type="Sandbox.User" Role="User" Multiplicity="1" />
+    <End Type="Sandbox.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

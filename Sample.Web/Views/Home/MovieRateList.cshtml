@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sample.Web.ViewModels.MovieRate.ListMovieRateModel>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        &nbsp;
+        <div class="pull-left">
+            Last movie rates
+        </div>
+        
+        <div class="btn-group btn-group-xs pull-right">
+            <button type="button" class="btn btn-default">week</button>
+            <button type="button" class="btn btn-default active">month</button>
+            <button type="button" class="btn btn-default">year</button>
+        </div>        
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Date</th>
+                    <th>Rate</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.OrderByDescending(m => m.Date)){
+                    <tr>
+                        <td>
+                            @movie.Title
+                        </td>
+                        <td>
+                            @movie.Date.ToString("dd-MM-yyyy")
+                        </td>
+                        <td>
+                            @movie.Rate                  
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

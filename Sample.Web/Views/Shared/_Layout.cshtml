@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.Name">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sample Web App</title>
+        
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Styles.Render("~/Content/css")
+
+        <!--[if lt IE 9]>
+            @Scripts.Render("~/bundles/legacybrowsers")
+        <![endif]-->
+    </head>
+    <body>
+        @Html.Partial("_Navbar")
+
+        <div class="page-alert">
+            <div class="alert alert-danger hide"></div>
+        </div>
+
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        @Html.Partial("_Modal")
+        @Html.Partial("_Footer")
+    </body>
+</html>

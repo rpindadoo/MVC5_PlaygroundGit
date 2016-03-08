@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Sample.Web.ViewModels.MovieRate.ListMovieRateModel>
+
+<table class="table table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Rate</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.OrderByDescending(m => m.Rate)){
+            <tr>
+                <td>
+                    @movie.Title
+                </td>
+                <td>
+                    @movie.Rate                  
+                </td>
+                <td>
+                    @movie.User                  
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

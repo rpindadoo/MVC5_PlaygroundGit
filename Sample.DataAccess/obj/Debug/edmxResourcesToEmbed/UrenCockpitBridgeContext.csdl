@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UrenCockpitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UrenCockpitContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="conv_defaultRole" EntityType="UrenCockpitModel.conv_defaultRole" />
+    <EntitySet Name="CostPrice" EntityType="UrenCockpitModel.CostPrice" />
+    <EntitySet Name="Daysheet" EntityType="UrenCockpitModel.Daysheet" />
+    <EntitySet Name="dtproperties" EntityType="UrenCockpitModel.dtproperties" />
+    <EntitySet Name="Enum_FilterActive" EntityType="UrenCockpitModel.Enum_FilterActive" />
+    <EntitySet Name="Enum_integrityType" EntityType="UrenCockpitModel.Enum_integrityType" />
+    <EntitySet Name="Enum_ListProjectOrdering" EntityType="UrenCockpitModel.Enum_ListProjectOrdering" />
+    <EntitySet Name="Enum_ProjectFase" EntityType="UrenCockpitModel.Enum_ProjectFase" />
+    <EntitySet Name="Enum_ProjectOrdering" EntityType="UrenCockpitModel.Enum_ProjectOrdering" />
+    <EntitySet Name="Enum_ProjectRole" EntityType="UrenCockpitModel.Enum_ProjectRole" />
+    <EntitySet Name="Enum_ProjectType" EntityType="UrenCockpitModel.Enum_ProjectType" />
+    <EntitySet Name="Enum_UserOrdering" EntityType="UrenCockpitModel.Enum_UserOrdering" />
+    <EntitySet Name="Enum_UserType" EntityType="UrenCockpitModel.Enum_UserType" />
+    <EntitySet Name="Enum_VakantieMethodiek" EntityType="UrenCockpitModel.Enum_VakantieMethodiek" />
+    <EntitySet Name="Holiday" EntityType="UrenCockpitModel.Holiday" />
+    <EntitySet Name="Hoursheet" EntityType="UrenCockpitModel.Hoursheet" />
+    <EntitySet Name="integrityCheck" EntityType="UrenCockpitModel.integrityCheck" />
+    <EntitySet Name="Project" EntityType="UrenCockpitModel.Project" />
+    <EntitySet Name="ProjectEmployeeRole" EntityType="UrenCockpitModel.ProjectEmployeeRole" />
+    <EntitySet Name="ProjectGroup" EntityType="UrenCockpitModel.ProjectGroup" />
+    <EntitySet Name="Setting" EntityType="UrenCockpitModel.Setting" />
+    <EntitySet Name="Subproject" EntityType="UrenCockpitModel.Subproject" />
+    <EntitySet Name="sysdiagrams" EntityType="UrenCockpitModel.sysdiagrams" />
+    <EntitySet Name="TextBlock" EntityType="UrenCockpitModel.TextBlock" />
+    <EntitySet Name="UrenBevestiging" EntityType="UrenCockpitModel.UrenBevestiging" />
+    <EntitySet Name="UrenCorrectie" EntityType="UrenCockpitModel.UrenCorrectie" />
+    <EntitySet Name="UrenIndiening" EntityType="UrenCockpitModel.UrenIndiening" />
+    <EntitySet Name="UrenMail" EntityType="UrenCockpitModel.UrenMail" />
+    <EntitySet Name="User" EntityType="UrenCockpitModel.User" />
+    <EntitySet Name="UserSetting" EntityType="UrenCockpitModel.UserSetting" />
+    <EntitySet Name="VakantieSaldo" EntityType="UrenCockpitModel.VakantieSaldo" />
+    <EntitySet Name="Werkblok" EntityType="UrenCockpitModel.Werkblok" />
+    <EntitySet Name="Werkrooster" EntityType="UrenCockpitModel.Werkrooster" />
+    <EntitySet Name="WerkSoort" EntityType="UrenCockpitModel.WerkSoort" />
+    <EntitySet Name="WerksoortGroep" EntityType="UrenCockpitModel.WerksoortGroep" />
+    <AssociationSet Name="FK_CostPrice_User" Association="UrenCockpitModel.FK_CostPrice_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="CostPrice" EntitySet="CostPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Daysheet_User" Association="UrenCockpitModel.FK_Daysheet_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Daysheet" EntitySet="Daysheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_Enum_integrityType1" Association="UrenCockpitModel.FK_integrityCheck_Enum_integrityType1">
+      <End Role="Enum_integrityType" EntitySet="Enum_integrityType" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Enum_ProjectFase" Association="UrenCockpitModel.FK_Project_Enum_ProjectFase">
+      <End Role="Enum_ProjectFase" EntitySet="Enum_ProjectFase" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enum_ProjectRole_Enum_ProjectRole" Association="UrenCockpitModel.FK_Enum_ProjectRole_Enum_ProjectRole">
+      <End Role="Enum_ProjectRole" EntitySet="Enum_ProjectRole" />
+      <End Role="Enum_ProjectRole1" EntitySet="Enum_ProjectRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_Enum_ProjectRole" Association="UrenCockpitModel.FK_ProjectEmployeeRole_Enum_ProjectRole">
+      <End Role="Enum_ProjectRole" EntitySet="Enum_ProjectRole" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Enum_UserType" Association="UrenCockpitModel.FK_Project_Enum_UserType">
+      <End Role="Enum_ProjectType" EntitySet="Enum_ProjectType" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Enum_UserType" Association="UrenCockpitModel.FK_User_Enum_UserType">
+      <End Role="Enum_UserType" EntitySet="Enum_UserType" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Enum_VakantieMethodiek" Association="UrenCockpitModel.FK_User_Enum_VakantieMethodiek">
+      <End Role="Enum_VakantieMethodiek" EntitySet="Enum_VakantieMethodiek" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoursheet_Subproject" Association="UrenCockpitModel.FK_Hoursheet_Subproject">
+      <End Role="Subproject" EntitySet="Subproject" />
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoursheet_User" Association="UrenCockpitModel.FK_Hoursheet_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_Hoursheet" Association="UrenCockpitModel.FK_integrityCheck_Hoursheet">
+      <End Role="Hoursheet" EntitySet="Hoursheet" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_integrityCheck_User" Association="UrenCockpitModel.FK_integrityCheck_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="integrityCheck" EntitySet="integrityCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_ProjectGroup" Association="UrenCockpitModel.FK_Project_ProjectGroup">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_Project" Association="UrenCockpitModel.FK_ProjectEmployeeRole_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subproject_Project" Association="UrenCockpitModel.FK_Subproject_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Subproject" EntitySet="Subproject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmployeeRole_User" Association="UrenCockpitModel.FK_ProjectEmployeeRole_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ProjectEmployeeRole" EntitySet="ProjectEmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectGroup_ProjectGroup1" Association="UrenCockpitModel.FK_ProjectGroup_ProjectGroup1">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="ProjectGroup1" EntitySet="ProjectGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectGroup_ProjectGroup2" Association="UrenCockpitModel.FK_ProjectGroup_ProjectGroup2">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="ProjectGroup1" EntitySet="ProjectGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_ProjectGroup" Association="UrenCockpitModel.FK_User_ProjectGroup">
+      <End Role="ProjectGroup" EntitySet="ProjectGroup" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetting_Setting" Association="UrenCockpitModel.FK_UserSetting_Setting">
+      <End Role="Setting" EntitySet="Setting" />
+      <End Role="UserSetting" EntitySet="UserSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pdx_subproj_WerkSoort" Association="UrenCockpitModel.FK_pdx_subproj_WerkSoort">
+      <End Role="WerkSoort" EntitySet="WerkSoort" />
+      <End Role="Subproject" EntitySet="Subproject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenBevestiging_User" Association="UrenCockpitModel.FK_UrenBevestiging_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenBevestiging" EntitySet="UrenBevestiging" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenBevestiging_User1" Association="UrenCockpitModel.FK_UrenBevestiging_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenBevestiging" EntitySet="UrenBevestiging" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenCorrectie_User" Association="UrenCockpitModel.FK_UrenCorrectie_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenCorrectie" EntitySet="UrenCorrectie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenCorrectie_User1" Association="UrenCockpitModel.FK_UrenCorrectie_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenCorrectie" EntitySet="UrenCorrectie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenIndiening_User" Association="UrenCockpitModel.FK_UrenIndiening_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenIndiening" EntitySet="UrenIndiening" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrenMail_User" Association="UrenCockpitModel.FK_UrenMail_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UrenMail" EntitySet="UrenMail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User" Association="UrenCockpitModel.FK_User_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetting_User" Association="UrenCockpitModel.FK_UserSetting_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserSetting" EntitySet="UserSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VakantieSaldo_User" Association="UrenCockpitModel.FK_VakantieSaldo_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VakantieSaldo" EntitySet="VakantieSaldo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Werkrooster_User" Association="UrenCockpitModel.FK_Werkrooster_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Werkrooster" EntitySet="Werkrooster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Werkblok_Werkrooster" Association="UrenCockpitModel.FK_Werkblok_Werkrooster">
+      <End Role="Werkrooster" EntitySet="Werkrooster" />
+      <End Role="Werkblok" EntitySet="Werkblok" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WerkSoort_WerksoortGroep" Association="UrenCockpitModel.FK_WerkSoort_WerksoortGroep">
+      <End Role="WerksoortGroep" EntitySet="WerksoortGroep" />
+      <End Role="WerkSoort" EntitySet="WerkSoort" />
+    </AssociationSet>
+    <AssociationSet Name="ProjectWerksoortGroep" Association="UrenCockpitModel.ProjectWerksoortGroep">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="WerksoortGroep" EntitySet="WerksoortGroep" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="conv_defaultRole">
+    <Key>
+      <PropertyRef Name="pernumber" />
+    </Key>
+    <Property Name="pernumber" Type="Int64" Nullable="false" />
+    <Property Name="Role" Type="Int64" />
+  </EntityType>
+  <EntityType Name="CostPrice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" Nullable="false" />
+    <Property Name="PeriodStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PeriodEnd" Type="DateTime" Precision="3" />
+    <Property Name="Rate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_CostPrice_User" FromRole="CostPrice" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Daysheet">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PerNumber" Type="Int64" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Starttijd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Eindtijd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NormaleMinuten" Type="Int16" Nullable="false" />
+    <Property Name="GewerkteMinuten" Type="Int16" Nullable="false" />
+    <Property Name="VakantieMinuten" Type="Int16" Nullable="false" />
+    <Property Name="ZiekteMinuten" Type="Int16" Nullable="false" />
+    <Property Name="OverMinuten" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_Daysheet_User" FromRole="Daysheet" ToRole="User" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Int32" />
+    <Property Name="property" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enum_FilterActive">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" />
+    <Property Name="Omschrijving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Enum_integrityType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" />
+    <Property Name="Omschrijving" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="integrityCheck" Relationship="UrenCockpitModel.FK_integrityCheck_Enum_integrityType1" FromRole="Enum_integrityType" ToRole="integrityCheck" />
+  </EntityType>
+  <EntityType Name="Enum_ListProjectOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectFase">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Project" Relationship="UrenCockpitModel.FK_Project_Enum_ProjectFase" FromRole="Enum_ProjectFase" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Omschrijving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectRole">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Enum_ProjectRole1" Relationship="UrenCockpitModel.FK_Enum_ProjectRole_Enum_ProjectRole" FromRole="Enum_ProjectRole" ToRole="Enum_ProjectRole1" />
+    <NavigationProperty Name="Enum_ProjectRole2" Relationship="UrenCockpitModel.FK_Enum_ProjectRole_Enum_ProjectRole" FromRole="Enum_ProjectRole1" ToRole="Enum_ProjectRole" />
+    <NavigationProperty Name="ProjectEmployeeRole" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_Enum_ProjectRole" FromRole="Enum_ProjectRole" ToRole="ProjectEmployeeRole" />
+  </EntityType>
+  <EntityType Name="Enum_ProjectType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Project" Relationship="UrenCockpitModel.FK_Project_Enum_UserType" FromRole="Enum_ProjectType" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Enum_UserOrdering">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" />
+    <Property Name="Omschrijving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Enum_UserType">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" />
+    <Property Name="Beschrijving" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_User_Enum_UserType" FromRole="Enum_UserType" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Enum_VakantieMethodiek">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_User_Enum_VakantieMethodiek" FromRole="Enum_VakantieMethodiek" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Omschrijving" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hoursheet">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PerNumber" Type="Int64" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Starttijd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Eindtijd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Minuten" Type="Int16" Nullable="false" />
+    <Property Name="SubProject" Type="Int64" Nullable="false" />
+    <Property Name="Omschrijving" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Geaccodeerd" Type="Boolean" Nullable="false" />
+    <Property Name="Verwerkt" Type="Boolean" Nullable="false" />
+    <Property Name="Issuenr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SyncedToTwinfieldAt" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Subproject1" Relationship="UrenCockpitModel.FK_Hoursheet_Subproject" FromRole="Hoursheet" ToRole="Subproject" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_Hoursheet_User" FromRole="Hoursheet" ToRole="User" />
+    <NavigationProperty Name="integrityCheck" Relationship="UrenCockpitModel.FK_integrityCheck_Hoursheet" FromRole="Hoursheet" ToRole="integrityCheck" />
+  </EntityType>
+  <EntityType Name="integrityCheck">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum" Type="DateTime" Precision="3" />
+    <Property Name="employee" Type="Int64" />
+    <Property Name="integrityType" Type="Int64" Nullable="false" />
+    <Property Name="Hoursheet" Type="Int64" />
+    <Property Name="veld1" Type="Int64" />
+    <Property Name="veld2" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+    <Property Name="veld3" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+    <Property Name="melding" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Enum_integrityType" Relationship="UrenCockpitModel.FK_integrityCheck_Enum_integrityType1" FromRole="integrityCheck" ToRole="Enum_integrityType" />
+    <NavigationProperty Name="Hoursheet1" Relationship="UrenCockpitModel.FK_integrityCheck_Hoursheet" FromRole="integrityCheck" ToRole="Hoursheet" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_integrityCheck_User" FromRole="integrityCheck" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Naam" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="StartDatum" Type="DateTime" Precision="3" />
+    <Property Name="EindDatum" Type="DateTime" Precision="3" />
+    <Property Name="Afgesloten" Type="Boolean" />
+    <Property Name="Manager" Type="Int64" />
+    <Property Name="ProjectGroup" Type="Int64" />
+    <Property Name="parentProject" Type="Int64" />
+    <Property Name="ProjectType" Type="Int64" />
+    <Property Name="ProjectFase" Type="Int64" />
+    <NavigationProperty Name="Enum_ProjectFase" Relationship="UrenCockpitModel.FK_Project_Enum_ProjectFase" FromRole="Project" ToRole="Enum_ProjectFase" />
+    <NavigationProperty Name="Enum_ProjectType" Relationship="UrenCockpitModel.FK_Project_Enum_UserType" FromRole="Project" ToRole="Enum_ProjectType" />
+    <NavigationProperty Name="ProjectGroup1" Relationship="UrenCockpitModel.FK_Project_ProjectGroup" FromRole="Project" ToRole="ProjectGroup" />
+    <NavigationProperty Name="ProjectEmployeeRole" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_Project" FromRole="Project" ToRole="ProjectEmployeeRole" />
+    <NavigationProperty Name="Subproject" Relationship="UrenCockpitModel.FK_Subproject_Project" FromRole="Project" ToRole="Subproject" />
+    <NavigationProperty Name="WerksoortGroep" Relationship="UrenCockpitModel.ProjectWerksoortGroep" FromRole="Project" ToRole="WerksoortGroep" />
+  </EntityType>
+  <EntityType Name="ProjectEmployeeRole">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project" Type="Int64" Nullable="false" />
+    <Property Name="Employ" Type="Int64" Nullable="false" />
+    <Property Name="Role" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Enum_ProjectRole" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_Enum_ProjectRole" FromRole="ProjectEmployeeRole" ToRole="Enum_ProjectRole" />
+    <NavigationProperty Name="Project1" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_Project" FromRole="ProjectEmployeeRole" ToRole="Project" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_User" FromRole="ProjectEmployeeRole" ToRole="User" />
+  </EntityType>
+  <EntityType Name="ProjectGroup">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Parent" Type="Int64" />
+    <Property Name="PoortGroep" Type="Int64" />
+    <Property Name="HoofdGroep" Type="Int64" />
+    <NavigationProperty Name="Project" Relationship="UrenCockpitModel.FK_Project_ProjectGroup" FromRole="ProjectGroup" ToRole="Project" />
+    <NavigationProperty Name="ProjectGroup1" Relationship="UrenCockpitModel.FK_ProjectGroup_ProjectGroup1" FromRole="ProjectGroup" ToRole="ProjectGroup1" />
+    <NavigationProperty Name="ProjectGroup2" Relationship="UrenCockpitModel.FK_ProjectGroup_ProjectGroup1" FromRole="ProjectGroup1" ToRole="ProjectGroup" />
+    <NavigationProperty Name="ProjectGroup11" Relationship="UrenCockpitModel.FK_ProjectGroup_ProjectGroup2" FromRole="ProjectGroup" ToRole="ProjectGroup1" />
+    <NavigationProperty Name="ProjectGroup3" Relationship="UrenCockpitModel.FK_ProjectGroup_ProjectGroup2" FromRole="ProjectGroup1" ToRole="ProjectGroup" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_User_ProjectGroup" FromRole="ProjectGroup" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int64" Nullable="false" />
+    <Property Name="App_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultI" Type="Int64" />
+    <Property Name="DefaultB" Type="Boolean" />
+    <Property Name="DefaultD" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserSetting" Relationship="UrenCockpitModel.FK_UserSetting_Setting" FromRole="Setting" ToRole="UserSetting" />
+  </EntityType>
+  <EntityType Name="Subproject">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectNumber" Type="Int64" />
+    <Property Name="SubNaam" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SubStartdatum" Type="DateTime" Precision="3" />
+    <Property Name="SubEinddatum" Type="DateTime" Precision="3" />
+    <Property Name="SubAfgesloten" Type="Boolean" />
+    <Property Name="SubBudget" Type="Double" />
+    <Property Name="Omschrijving" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VerwerkteMinuten" Type="Int32" />
+    <Property Name="Werksoort" Type="Int64" />
+    <NavigationProperty Name="Hoursheet" Relationship="UrenCockpitModel.FK_Hoursheet_Subproject" FromRole="Subproject" ToRole="Hoursheet" />
+    <NavigationProperty Name="Project" Relationship="UrenCockpitModel.FK_Subproject_Project" FromRole="Subproject" ToRole="Project" />
+    <NavigationProperty Name="WerkSoort1" Relationship="UrenCockpitModel.FK_pdx_subproj_WerkSoort" FromRole="Subproject" ToRole="WerkSoort" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TextBlock">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UrenBevestiging">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="Int64" Nullable="false" />
+    <Property Name="BevestigdDoor" Type="Int64" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Datum" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_UrenBevestiging_User" FromRole="UrenBevestiging" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="UrenCockpitModel.FK_UrenBevestiging_User1" FromRole="UrenBevestiging" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UrenCorrectie">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee" Type="Int64" Nullable="false" />
+    <Property Name="AantalMinuten" Type="Int32" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Omschrijving" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="IngevoerdDoor" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_UrenCorrectie_User" FromRole="UrenCorrectie" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_UrenCorrectie_User1" FromRole="UrenCorrectie" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UrenIndiening">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="Int64" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Datum" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_UrenIndiening_User" FromRole="UrenIndiening" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UrenMail">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="Int64" Nullable="false" />
+    <Property Name="IsIndiening" Type="Boolean" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Tekst" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_UrenMail_User" FromRole="UrenMail" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NTUsername" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="Int64" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="VakantieMethodiek" Type="Int64" Nullable="false" />
+    <Property Name="VakantieSaldo" Type="Int64" />
+    <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="DefaultGroup" Type="Int64" />
+    <Property Name="Hoofdgroep" Type="Int64" />
+    <Property Name="EindsaldoVorigJaar" Type="Int64" />
+    <Property Name="VerschilMinuten" Type="Int64" />
+    <Property Name="VerschilPerc" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OverwerkMinuten" Type="Int64" />
+    <Property Name="Achternaam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Voornamen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Roepnaam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Initialen" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Tussenvoegsels" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Geboortedatum" Type="DateTime" Precision="3" />
+    <Property Name="InDienstSinds" Type="DateTime" Precision="3" />
+    <Property Name="Funktie" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Manager" Type="Int64" />
+    <Property Name="UitDienst" Type="DateTime" Precision="3" />
+    <Property Name="LastEnteredDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CostPrice" Relationship="UrenCockpitModel.FK_CostPrice_User" FromRole="User" ToRole="CostPrice" />
+    <NavigationProperty Name="Daysheet" Relationship="UrenCockpitModel.FK_Daysheet_User" FromRole="User" ToRole="Daysheet" />
+    <NavigationProperty Name="Enum_UserType" Relationship="UrenCockpitModel.FK_User_Enum_UserType" FromRole="User" ToRole="Enum_UserType" />
+    <NavigationProperty Name="Enum_VakantieMethodiek" Relationship="UrenCockpitModel.FK_User_Enum_VakantieMethodiek" FromRole="User" ToRole="Enum_VakantieMethodiek" />
+    <NavigationProperty Name="Hoursheet" Relationship="UrenCockpitModel.FK_Hoursheet_User" FromRole="User" ToRole="Hoursheet" />
+    <NavigationProperty Name="integrityCheck" Relationship="UrenCockpitModel.FK_integrityCheck_User" FromRole="User" ToRole="integrityCheck" />
+    <NavigationProperty Name="ProjectEmployeeRole" Relationship="UrenCockpitModel.FK_ProjectEmployeeRole_User" FromRole="User" ToRole="ProjectEmployeeRole" />
+    <NavigationProperty Name="ProjectGroup" Relationship="UrenCockpitModel.FK_User_ProjectGroup" FromRole="User" ToRole="ProjectGroup" />
+    <NavigationProperty Name="UrenBevestiging" Relationship="UrenCockpitModel.FK_UrenBevestiging_User" FromRole="User" ToRole="UrenBevestiging" />
+    <NavigationProperty Name="UrenBevestiging1" Relationship="UrenCockpitModel.FK_UrenBevestiging_User1" FromRole="User" ToRole="UrenBevestiging" />
+    <NavigationProperty Name="UrenCorrectie" Relationship="UrenCockpitModel.FK_UrenCorrectie_User" FromRole="User" ToRole="UrenCorrectie" />
+    <NavigationProperty Name="UrenCorrectie1" Relationship="UrenCockpitModel.FK_UrenCorrectie_User1" FromRole="User" ToRole="UrenCorrectie" />
+    <NavigationProperty Name="UrenIndiening" Relationship="UrenCockpitModel.FK_UrenIndiening_User" FromRole="User" ToRole="UrenIndiening" />
+    <NavigationProperty Name="UrenMail" Relationship="UrenCockpitModel.FK_UrenMail_User" FromRole="User" ToRole="UrenMail" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_User_User" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="UrenCockpitModel.FK_User_User" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="UserSetting" Relationship="UrenCockpitModel.FK_UserSetting_User" FromRole="User" ToRole="UserSetting" />
+    <NavigationProperty Name="VakantieSaldo1" Relationship="UrenCockpitModel.FK_VakantieSaldo_User" FromRole="User" ToRole="VakantieSaldo" />
+    <NavigationProperty Name="Werkrooster" Relationship="UrenCockpitModel.FK_Werkrooster_User" FromRole="User" ToRole="Werkrooster" />
+  </EntityType>
+  <EntityType Name="UserSetting">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="Int64" Nullable="false" />
+    <Property Name="Setting" Type="Int64" Nullable="false" />
+    <Property Name="ValI" Type="Int64" />
+    <Property Name="ValB" Type="Boolean" />
+    <Property Name="ValD" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Setting1" Relationship="UrenCockpitModel.FK_UserSetting_Setting" FromRole="UserSetting" ToRole="Setting" />
+    <NavigationProperty Name="User1" Relationship="UrenCockpitModel.FK_UserSetting_User" FromRole="UserSetting" ToRole="User" />
+  </EntityType>
+  <EntityType Name="VakantieSaldo">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PerNumber" Type="Int64" Nullable="false" />
+    <Property Name="Jaar" Type="Int32" Nullable="false" />
+    <Property Name="Saldo" Type="Int32" Nullable="false" />
+    <Property Name="IsBegin" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_VakantieSaldo_User" FromRole="VakantieSaldo" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Werkblok">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Werkrooster" Type="Int64" Nullable="false" />
+    <Property Name="Weekdag" Type="Int32" />
+    <Property Name="Starttijd" Type="DateTime" Precision="3" />
+    <Property Name="Eindtijd" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Werkrooster1" Relationship="UrenCockpitModel.FK_Werkblok_Werkrooster" FromRole="Werkblok" ToRole="Werkrooster" />
+  </EntityType>
+  <EntityType Name="Werkrooster">
+    <Key>
+      <PropertyRef Name="OID" />
+    </Key>
+    <Property Name="OID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee" Type="Int64" />
+    <Property Name="Startdatum" Type="DateTime" Precision="3" />
+    <Property Name="Einddatum" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="UrenCockpitModel.FK_Werkrooster_User" FromRole="Werkrooster" ToRole="User" />
+    <NavigationProperty Name="Werkblok" Relationship="UrenCockpitModel.FK_Werkblok_Werkrooster" FromRole="Werkrooster" ToRole="Werkblok" />
+  </EntityType>
+  <EntityType Name="WerkSoort">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="Int64" Nullable="false" />
+    <Property Name="WerkSoortGroep" Type="Int64" Nullable="false" />
+    <Property Name="Naam" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Subproject" Relationship="UrenCockpitModel.FK_pdx_subproj_WerkSoort" FromRole="WerkSoort" ToRole="Subproject" />
+    <NavigationProperty Name="WerksoortGroep1" Relationship="UrenCockpitModel.FK_WerkSoort_WerksoortGroep" FromRole="WerkSoort" ToRole="WerksoortGroep" />
+  </EntityType>
+  <EntityType Name="WerksoortGroep">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="Int64" Nullable="false" />
+    <Property Name="Groepscode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Groepsnaam" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WerkSoort" Relationship="UrenCockpitModel.FK_WerkSoort_WerksoortGroep" FromRole="WerksoortGroep" ToRole="WerkSoort" />
+    <NavigationProperty Name="Project" Relationship="UrenCockpitModel.ProjectWerksoortGroep" FromRole="WerksoortGroep" ToRole="Project" />
+  </EntityType>
+  <Association Name="FK_CostPrice_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.CostPrice" Role="CostPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="CostPrice">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Daysheet_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.Daysheet" Role="Daysheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Daysheet">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_Enum_integrityType1">
+    <End Type="UrenCockpitModel.Enum_integrityType" Role="Enum_integrityType" Multiplicity="1" />
+    <End Type="UrenCockpitModel.integrityCheck" Role="integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_integrityType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="integrityType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Enum_ProjectFase">
+    <End Type="UrenCockpitModel.Enum_ProjectFase" Role="Enum_ProjectFase" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectFase">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectFase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enum_ProjectRole_Enum_ProjectRole">
+    <End Type="UrenCockpitModel.Enum_ProjectRole" Role="Enum_ProjectRole" Multiplicity="1" />
+    <End Type="UrenCockpitModel.Enum_ProjectRole" Role="Enum_ProjectRole1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectRole">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Enum_ProjectRole1">
+        <PropertyRef Name="OID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_Enum_ProjectRole">
+    <End Type="UrenCockpitModel.Enum_ProjectRole" Role="Enum_ProjectRole" Multiplicity="1" />
+    <End Type="UrenCockpitModel.ProjectEmployeeRole" Role="ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectRole">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Enum_UserType">
+    <End Type="UrenCockpitModel.Enum_ProjectType" Role="Enum_ProjectType" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_ProjectType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Enum_UserType">
+    <End Type="UrenCockpitModel.Enum_UserType" Role="Enum_UserType" Multiplicity="1" />
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_UserType">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Enum_VakantieMethodiek">
+    <End Type="UrenCockpitModel.Enum_VakantieMethodiek" Role="Enum_VakantieMethodiek" Multiplicity="1" />
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enum_VakantieMethodiek">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="VakantieMethodiek" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoursheet_Subproject">
+    <End Type="UrenCockpitModel.Subproject" Role="Subproject" Multiplicity="1" />
+    <End Type="UrenCockpitModel.Hoursheet" Role="Hoursheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subproject">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Hoursheet">
+        <PropertyRef Name="SubProject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoursheet_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.Hoursheet" Role="Hoursheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Hoursheet">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_Hoursheet">
+    <End Type="UrenCockpitModel.Hoursheet" Role="Hoursheet" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.integrityCheck" Role="integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hoursheet">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="Hoursheet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_integrityCheck_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.integrityCheck" Role="integrityCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="integrityCheck">
+        <PropertyRef Name="employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_ProjectGroup">
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_Project">
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="1" />
+    <End Type="UrenCockpitModel.ProjectEmployeeRole" Role="ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Project" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subproject_Project">
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Subproject" Role="Subproject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Subproject">
+        <PropertyRef Name="ProjectNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmployeeRole_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.ProjectEmployeeRole" Role="ProjectEmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectEmployeeRole">
+        <PropertyRef Name="Employ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectGroup_ProjectGroup1">
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectGroup1">
+        <PropertyRef Name="Parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectGroup_ProjectGroup2">
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="ProjectGroup1">
+        <PropertyRef Name="PoortGroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_ProjectGroup">
+    <End Type="UrenCockpitModel.ProjectGroup" Role="ProjectGroup" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectGroup">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Hoofdgroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetting_Setting">
+    <End Type="UrenCockpitModel.Setting" Role="Setting" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UserSetting" Role="UserSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setting">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UserSetting">
+        <PropertyRef Name="Setting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pdx_subproj_WerkSoort">
+    <End Type="UrenCockpitModel.WerkSoort" Role="WerkSoort" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Subproject" Role="Subproject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WerkSoort">
+        <PropertyRef Name="oid" />
+      </Principal>
+      <Dependent Role="Subproject">
+        <PropertyRef Name="Werksoort" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenBevestiging_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenBevestiging" Role="UrenBevestiging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenBevestiging">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenBevestiging_User1">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenBevestiging" Role="UrenBevestiging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenBevestiging">
+        <PropertyRef Name="BevestigdDoor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenCorrectie_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenCorrectie" Role="UrenCorrectie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenCorrectie">
+        <PropertyRef Name="Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenCorrectie_User1">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenCorrectie" Role="UrenCorrectie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenCorrectie">
+        <PropertyRef Name="IngevoerdDoor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenIndiening_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenIndiening" Role="UrenIndiening" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenIndiening">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrenMail_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UrenMail" Role="UrenMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UrenMail">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetting_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.UserSetting" Role="UserSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="UserSetting">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VakantieSaldo_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="1" />
+    <End Type="UrenCockpitModel.VakantieSaldo" Role="VakantieSaldo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="VakantieSaldo">
+        <PropertyRef Name="PerNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Werkrooster_User">
+    <End Type="UrenCockpitModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="UrenCockpitModel.Werkrooster" Role="Werkrooster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Werkrooster">
+        <PropertyRef Name="Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Werkblok_Werkrooster">
+    <End Type="UrenCockpitModel.Werkrooster" Role="Werkrooster" Multiplicity="1" />
+    <End Type="UrenCockpitModel.Werkblok" Role="Werkblok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Werkrooster">
+        <PropertyRef Name="OID" />
+      </Principal>
+      <Dependent Role="Werkblok">
+        <PropertyRef Name="Werkrooster" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WerkSoort_WerksoortGroep">
+    <End Type="UrenCockpitModel.WerksoortGroep" Role="WerksoortGroep" Multiplicity="1" />
+    <End Type="UrenCockpitModel.WerkSoort" Role="WerkSoort" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WerksoortGroep">
+        <PropertyRef Name="oid" />
+      </Principal>
+      <Dependent Role="WerkSoort">
+        <PropertyRef Name="WerkSoortGroep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProjectWerksoortGroep">
+    <End Type="UrenCockpitModel.Project" Role="Project" Multiplicity="*" />
+    <End Type="UrenCockpitModel.WerksoortGroep" Role="WerksoortGroep" Multiplicity="*" />
+  </Association>
+</Schema>

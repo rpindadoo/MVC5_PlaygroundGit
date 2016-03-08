@@ -1,0 +1,11 @@
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\UCB.DAL\obj\Debug\Sandbox.Business.csprojResolveAssemblyReference.cache
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\UCB.DAL\obj\Debug\UCB.DAL.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\UCB.DAL\obj\Debug\UCB.DAL.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\obj\Debug\Sandbox.Business.csprojResolveAssemblyReference.cache
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\bin\Debug\Sandbox.Business.dll.config
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\bin\Debug\Sandbox.Business.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\bin\Debug\Sandbox.Business.pdb
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\bin\Debug\EntityFramework.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\bin\Debug\EntityFramework.xml
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\obj\Debug\Sandbox.Business.dll
+C:\Users\roberto\Documents\Visual Studio 2012\Projects\Sandbox\Sandbox.Business\obj\Debug\Sandbox.Business.pdb
